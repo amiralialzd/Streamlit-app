@@ -21,7 +21,7 @@ add_launchsite = st.sidebar.selectbox(
 
 st.dataframe(df)
 
-X=df.drop(columns=['Class','Date','BoosterVersion','Orbit','LaunchSite','Legs','GridFins','Reused','LandingPad','Outcome','Serial'],axis=1)
+X=df.drop(columns=['Class','Date','BoosterVersion','Orbit','LaunchSite','Legs','GridFins','Reused','LandingPad','Outcome','Serial'])
 Y=df['Class'].to_numpy()
 transform=preprocessing.StandardScaler()
 X=transform.fit_transform(X)
