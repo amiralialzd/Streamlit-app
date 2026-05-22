@@ -12,7 +12,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 
 
-df=pd.read_csv('/Users/amirali/Desktop/capstone/spacex_dataset_part_2.csv')
+df=pd.read_csv('/spacex_dataset_part_2.csv')
 
 add_launchsite = st.sidebar.selectbox(
     "choose your launch site",
