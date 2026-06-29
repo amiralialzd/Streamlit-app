@@ -13,12 +13,15 @@ import numpy as np
 
 
 df=pd.read_csv('spacex_dataset_part_2.csv')
-
+print("rows, cols:", df.shape)
+print("success rate:", df['Class'].mean())
+print("payload min/max:", df['PayloadMass'].min(), df['PayloadMass'].max())
+print(df['LaunchSite'].value_counts())
 add_launchsite = st.sidebar.selectbox(
     "choose your launch site",
     ("CCAFS SLC 40", "KSC LC 39A",'VAFB SLC 4E','ALL'),index=3
 )
-
+st.caption("Note: the model is trained on the full dataset; the charts above reflect your filter, but the model evaluation does not.")
 st.dataframe(df)
 
 X=df.drop(columns=['Class','Date','BoosterVersion','Orbit','LaunchSite','Legs','GridFins','Reused','LandingPad','Outcome','Serial'])
@@ -36,7 +39,7 @@ with st.sidebar:
         "Choose a method",
         ("DecisionTreeClassifier", "KNeighborsClassifier"))
 
-start_num , end_num =st.select_slider('select a range of numbers',options=range(0,100001),value=(0,100))
+start_num , end_num =st.select_slider('select a range of numbers',options=range(0,13621),value=(0,13620))
 
 ranges=[start_num, end_num]
 
