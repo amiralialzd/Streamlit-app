@@ -4,8 +4,9 @@ An interactive Streamlit dashboard that explores SpaceX Falcon 9 first-stage lan
 
 ## Live Demo
 
-<!-- Add your Streamlit Community Cloud URL here after deploying -->
-*(deployment link goes here)*
+
+ http://192.168.8.141:8501
+
 
 ## Features
 
