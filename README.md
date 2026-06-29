@@ -3,11 +3,7 @@
 An interactive Streamlit dashboard that explores SpaceX Falcon 9 first-stage landing outcomes and compares two tuned classification models. Users can filter by launch site and payload mass to see success rates, and switch between a Decision Tree and a K-Nearest Neighbors classifier.
 
 ## Live Demo
-
-
- http://192.168.8.141:8501
-
-
+https://app-app-tvrvkngzsyzte6wlprytah.streamlit.app
 ## Features
 
 - **Interactive filters** — select launch site (CCAFS SLC 40, KSC LC 39A, VAFB SLC 4E, or All) and a payload mass range
@@ -36,7 +32,7 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-The app opens in your browser at `https://app-app-tvrvkngzsyzte6wlprytah.streamlit.app`.
+The app opens in your browser at `http://localhost:8501`.
 
 ## Possible Improvements
 
